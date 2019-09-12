@@ -24,7 +24,7 @@ namespace MyUnitTestTask
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
 
-            var CityList = htmlDocument.DocumentNode.SelectNodes("//a[contains(@class, "bui-link")]").
+            var CityList = htmlDocument.DocumentNode.SelectNodes("//a[contains(@class,"bui-link")]").
                 Where(x => x.Attributes["class"].Value.Contains(("bui-link")));
             foreach (var item in CityList)
             {
